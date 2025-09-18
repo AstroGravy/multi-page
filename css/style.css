@@ -1,0 +1,100 @@
+.body1 {
+ background-color: #7bafeb;
+}
+.body2 {
+ background-color: #7b9deb;
+}
+.dot-border{
+    border: 6px dotted;
+}
+#name{
+    font-family: Impact;
+    text-shadow: 2px 2px 4px rgb(0, 92, 9);
+}
+.link-style{
+    color:black;
+    cursor: grab;
+}
+p{
+    font-family: sans-serif;
+    color: white;
+    text-shadow: -1px 0 1px blue, 0 1px 1px blue, 1px 0 1px red, 0 -1px 1px red;
+}
+.center{
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+font-size: 18px;
+}
+.show-hover{
+    opacity: 1;
+}
+.show-hover:hover + .hidden{
+    opacity: 1;
+}
+.show-hover:hover{
+    filter: blur(2px);
+}
+.hidden{
+    opacity: 0;
+}
+.hidden:hover{
+    opacity: 1;
+}
+
+@keyframes text-big{
+    0% {font-size: 20px; color: red; margin-top: 0px; transform: rotate(0deg);}
+    25% {font-size: 40px; color: blue; margin-top: -20px; transform: rotate(0deg);}
+    50% {font-size: 20px; color: rgb(0, 255, 0); margin-top: 0px; transform: rotate(0deg);}
+    75% {font-size: 40px; color: blue; margin-top: -20px; transform: rotate(180deg);}
+    100% {font-size: 20px; color: red; margin-top: 0px; transform: rotate(360deg);}
+}
+
+.animated{
+    font-size: 20px;
+    position: relative;
+    margin-top: 0px;
+    text-align: center;
+    animation-name: text-big;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+.horiz-nav {
+        background-color: #333;
+        }
+        .horiz-nav ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        }
+        .horiz-nav li {
+        margin-right: 25px;
+        }
+        .horiz-nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: block;
+        }
+        /* Hover effect */
+        .horiz-nav a:hover {
+        background-color: #575757;
+        }
+        /* Active (current page) link */
+        .horiz-nav a.active {
+        background-color: #04AA6D;  /* a green highlight */
+        font-weight: bold;          /* make it stand out */
+        }
+        .horiz-nav a.hidden-link {
+            opacity: 1;
+            display: none;
+        }
+        .horiz-nav a.active:hover .horiz-nav a.hidden-link{
+            opacity: 1;
+            display: block;
+        }<!----couldnt get this to work, something about having divs when i researched it>
+        .horiz-nav a.active:hover {
+            color: black;
+        }
